@@ -442,7 +442,7 @@ var chaLimit = message.channel.awaitMessages(filter, { max: 1, time: 20000, erro
     limit = coll.first().content
 coll.first().delete()
  
-  e.edit("جاري اعداد الغرفه الرجاء الانتضار...")
+  e.edit("⚠ جاري اعداد الغرفه الرجاء الانتضار...")
   message.guild.createChannel(name, type).then(c => {
     c.edit({
       userLimit: limit
@@ -457,7 +457,7 @@ coll.first().delete()
       embed: embed.setTitle("New TempChat") .setDescription(`Channel Type: ${type}`) .addField("Channel owner", message.author.username) .addField("Channel name", name) .addField("Channel timeout", time) .addField("Channel ID", c.id)
     })
   })
-  e.edit("تم انشاء الغرفه استمتع")
+  e.edit("✅ تم انشاء الغرفه استمتع")
  
 })
 })
@@ -498,7 +498,7 @@ coll.first().delete()
   
 client.on('message', message => {
       if (!devs.includes(message.author.id)) return;
-  if (message.content.startsWith(adminprefix + 'sliver')) {
+  if (message.content.startsWith(adminprefix + 'Koinex')) {
     if (!devs.includes(message.author.id)) return; 
 let args = message.content.split(' ').slice(1).join(' ');
 
@@ -532,7 +532,7 @@ client.on('message', message => {
     )
     const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
-          .setDescription(" تم أرسال الرابط برسالة خاصة ")
+          .setDescription("📥 تم أرسال الرابط برسالة خاصة ")
            .setAuthor(client.user.username, client.user.avatarURL)
                  .setAuthor(client.user.username, client.user.avatarURL)
                 .setFooter('طلب بواسطة: ' + message.author.tag)
@@ -541,7 +541,7 @@ client.on('message', message => {
               const Embed11 = new Discord.RichEmbed()
         .setColor("RANDOM")
         
-    .setDescription(" مدة الرابط : ساعه  عدد استخدامات الرابط : 1 ")
+    .setDescription(" مدة الرابط: ساعة واحدة ")
       message.author.sendEmbed(Embed11)
     }
 });
