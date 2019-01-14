@@ -3024,7 +3024,7 @@ client.on("guildMemberAdd", member => {
       });
 
 client.on('ready', () => {
-client.user.setGame('!help  ||  -inv .','https://www.twitch.tv/kemo355');
+client.user.setGame('!help  ||  !inv .','https://www.twitch.tv/kemo355');
 console.log('Logging into discord..');
 console.log(`
 By Koinex Team ( imad )
