@@ -573,7 +573,7 @@ m.sendMessage(args)
 client.on('ebnklb',function(ebnklb) {
     
     if(ebnklb.content.startsWith(`<@${client.user.id}>`)) {
-        ebnklb.channel.send('Hey Im **Sliver bot !**  A Nice Bot Developed By:`MHSTR`')
+        ebnklb.channel.send('Hey Im ** Koinex BOT ! ** Owner of Bot is ** imad **')
         ebnklb.channel.send('My Prefix `!`')
 
     }
@@ -613,9 +613,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
     let pages = [`
 ***__وصف عن البوت__***
 **
-:gem:  البوت فيه كثير ميزات حلوة و جميلة
+:gem:  Koinex BOT 
  ا:rocket: البوت يعمل 24 ساعه 
-بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
+بوت يمتلك مضد جحفله + سبام +نشر روابط + مضاد سب :gear: 
 **
         ***__General orders__***
 **
@@ -683,7 +683,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!cv <name> / انشاء رووم فويس』
 『!delet <name> / مسح الشات او الرووم فويس』
 『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
-   `,`
+   `,` **
         ***__Music orders__***
 **
 『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
