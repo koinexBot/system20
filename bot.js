@@ -617,7 +617,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
  ا:rocket: البوت يعمل 24 ساعه 
 بوت يمتلك مضد جحفله + سبام +نشر روابط + مضاد سب :gear: 
 **
-        ***__General orders__***
+         **__General orders__**
 **
 『!allbots/لعرض جميع البوتات الي بالسيرفر』
 『!server/يعرض لك معلومات عن السيرفر』
@@ -656,7 +656,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
   `
 ,`
-        ***__Administrative Orders__***
+         **__Administrative Orders__**
 **
 『!move @user /  لسحب الشخص الى روومك』
 『!voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
@@ -682,9 +682,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!ct <name> / انشاء شات』
 『!cv <name> / انشاء رووم فويس』
 『!delet <name> / مسح الشات او الرووم فويس』
-『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
-   `,` **
-        ***__Music orders__***
+『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』**
+   `,` 
+         **__Music orders__**
 **
 『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
 『${prefix}skip / لتجآوز الأغنية الحآلية』
@@ -695,7 +695,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
 『${prefix}queue / لمعرفة قآئمة التشغيل』
 **
-        ***__Games orders__***
+         **__Games orders__**
  **       
 『!rps / حجر ورقة مقص』
 『!speed / اسرع كتابة』
@@ -709,9 +709,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!لعبة مريم / مريم』
 『!فوائد ونصائح  / هل تعلم』
 『!يعطيك عقابات قاسية / عقاب 』
-
-
 **
+
+
    
 `]
     let page = 1;
