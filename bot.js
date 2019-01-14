@@ -3070,11 +3070,197 @@ client.on("guildMemberAdd", member => {
       });
 
 client.on('ready', () => {
-client.user.setGame('Koinex BOT !help','https://www.twitch.tv/kemo355');
+client.user.setGame('!help | !inv','https://www.twitch.tv/kemo355');
 console.log('Logging into discord..');
 console.log(`
 By Ҝ€₥σ
 `);
+
+});
+
+client.on('message', async message => {
+
+  if(message.author.bot || message.channel.type === '!bc') return;
+
+  let args = message.content.split(' ');
+
+  if(args[0] === `!bc`) {
+
+    const nos = new Discord.RichEmbed()
+
+     .setDescription("**:x: | هذا الأمر فقط للسيرفرات**")
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();	  
+
+  if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
+
+     const nopermission = new Discord.RichEmbed()
+
+     .setDescription("**:x: | ADMINISTRATOR للأسف لا ... تمتلك صلاحية**")
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();
+
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(nopermission);
+
+	   let args44141 = message.content.split(" ").join(" ").slice(2 + prefix.length);
+
+	  const nope = new Discord.RichEmbed()
+
+     .setDescription("**:interrobang: | يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**")
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();
+
+  if (!args44141) return message.channel.send(nope);
+
+	   const broadcast = new Discord.RichEmbed()
+
+     .setDescription(`**:thinking: | هل أنت متأكد من إرسالك البرودكاست ؟ \nمحتوى البرودكاست على : ** ` + `\n\`\`${args44141}\`\``)
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();  
+
+    let msgCount = 0;
+
+    let errorCount = 0;
+
+    let successCount = 0;
+
+	  const DUDEX = new Discord.RichEmbed()
+
+     .setDescription(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`)
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();
+
+	  message.channel.send(broadcast).then(msg => {
+
+  msg.react('✅')
+
+  .then(() => msg.react('❌'))
+
+  .then(() => msg.react('✅'))
+
+  let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+
+  let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+
+  let reaction1 = msg.createReactionCollector(reaction1Filter);
+
+  let reaction2 = msg.createReactionCollector(reaction2Filter);
+
+  reaction1.on("collect", r => {
+
+    msg.delete();
+
+    message.channel.send(DUDEX).then(msg => {
+
+      message.guild.members.forEach(m => {
+
+        m.send(args.replace(`[user]`, m)).catch().then(() => {
+
+	if (message.attachments.first()) {
+
+	m.sendFile(message.attachments.first().url).catch();
+
+	}
+
+          successCount++;
+
+          msgCount++;
+
+		  const DUDEX1 = new Discord.RichEmbed()
+
+     .setDescription(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`)
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();
+
+          msg.edit(DUDEX1);
+
+        }).catch(e => {
+
+          errorCount++;
+
+          msgCount++;
+
+		  const DUDEX2 = new Discord.RichEmbed()
+
+     .setDescription(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`)
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();
+
+          msg.edit(DUDEX2);
+
+	})
+
+        })
+
+        });
+
+      });
+
+  reaction2.on("collect", r => {
+
+     msg.delete();
+
+     const Cancel = new Discord.RichEmbed()
+
+     .setDescription(`**:x: | تم ... إلغاء البرودكاست**`)
+
+     .setColor(000000)
+
+     .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+
+     .setFooter(`Requested By ${message.author.username}` , message.author.avatarURL)
+
+     .setTimestamp();  
+
+  message.channel.send(Cancel).then(m => m.delete(5000));
+
+	})
+
+    });
+
+  }
 
 });
 
