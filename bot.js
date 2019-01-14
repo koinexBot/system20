@@ -2858,8 +2858,8 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: click here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot`)
+        .setTitle(`Click Here To Invite Koinex BOT `)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=534336389253431307&permissions=8&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
@@ -3112,7 +3112,7 @@ client.on("guildMemberAdd", member => {
       });
 
 client.on('ready', () => {
-client.user.setGame('System II !help','https://www.twitch.tv/kemo355');
+client.user.setGame('Koinex BOT !help','https://www.twitch.tv/kemo355');
 console.log('Logging into discord..');
 console.log(`
 By Ҝ€₥σ
