@@ -664,6 +664,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 💎 [ !لعبة مريم / مريم ]
 💎 [ !فوائد ونصائح  / هل تعلم ]
 💎 [ !يعطيك عقابات قاسية / عقاب ]
+💎 [ رابط بوت لو تبي تضيفه : https://discordapp.com/api/oauth2/authorize?client_id=534336389253431307&permissions=8&scope=bot ]
 **
 
 
