@@ -321,8 +321,8 @@ if(!muteRole1) {
 delete warn[message.author.id];
     delete user[message.author.id];
 	const embed500 = new Discord.RichEmbed()
-     .setTitle(`mark:  | There is someone trying `)
-      .setDescription(":white_check_mark:  | `There is someone trying to do spam`\n\nName:\n"+`${message.author.username}#${message.author.discriminator}`+"\nThe required procedures have been taken")      .setColor("ff0000")
+     .setTitle(`** ⚠ | There is someone trying** `)
+      .setDescription("**:white_check_mark:  | `There is someone trying to do spam`\n\nName:\n"+`${message.author.username}#${message.author.discriminator}`+"\nThe required procedures have been taken**")      .setColor("ff0000")
     message.channel.send(embed500)
     	const embed20 = new Discord.RichEmbed()
       .setTitle(":scales: | you are punished")
@@ -410,7 +410,7 @@ client.on('message', async message => {
   if(message.content.startsWith(prefix + "tc")) {
       if(message.author.bot) return;
     if(!message.channel.guild) return;
-    await message.channel.send("**⏳ ارسل اسم الروم**").then(e => {
+    await message.channel.send("**⏳ ارســـــــل اســـــــــــم الـــــروم**").then(e => {
     var filter = m => m.author.id === message.author.id
     var  name = '';
    var time = '';
@@ -425,33 +425,33 @@ client.on('message', async message => {
  
  
  
-e.edit("**⏳ ارسل مدة الروم بالدقائق لااقل من 2 ولا اعلى من 180**")
+e.edit("**⏳ أرســــــل مدة الروم بالدقائق لا أقـــــل من 2 ولا اعلى أكـــــثر من 180**")
 var chaTime = message.channel.awaitMessages(filter, { max: 1, time: 20000, errors: ['time'] })
 .then(co => {
-if(isNaN(co.first().content)) return message.reply("**⏳ الوقت بالدقائق ! ارقام فقطٍ**");
+if(isNaN(co.first().content)) return message.reply("**⏳ الوقــــــــت بالدقائق ! ارقـــــام فـــــــقط**");
 if(co.first().content > 180 || co.first().content < 2) return message.channel.send("لا اقل من دقيقتان ولا اكثر من 180 دقيقه")
   time = co.first().content
 co.first().delete()
-  e.edit("**ارسل نوع الروم text, voice**")
+  e.edit("**ارســـــل نــــــوع الروم text, voice**")
 var chaType = message.channel.awaitMessages(filter, { max: 1, time: 20000, errors: ['time'] })
 .then(col => {
   type = col.first().content
 col.first().delete()
-e.edit("**🔧 ارسل عدد الاعضاء الذين يستطيعون الدخول**")
+e.edit("**🔗 ارســــل عــــــدد االأعضـــــــاء الالـــــذين تـــــــريد إدخالهـــــــــــم **")
 var chaLimit = message.channel.awaitMessages(filter, { max: 1, time: 20000, errors: ['time'] })
 .then(coll => {
-  if(isNaN(coll.first().content)) return message.reply("**عدد الاعضاء يكون بالارقام فقط**");
+  if(isNaN(coll.first().content)) return message.reply("** 🔗عــــــدد الأعضـــــاء يكـــــــــــون بالأرقـــــــــــام فقـــــــط**");
     limit = coll.first().content
 coll.first().delete()
  
-  e.edit("⚠ جاري اعداد الغرفه الرجاء الانتضار...")
+  e.edit("⚠ جـــــــــــاري اعـــــداد االغرفـــــــة االرجــــــا الإنتضـــــــــــار...")
   message.guild.createChannel(name, type).then(c => {
     c.edit({
       userLimit: limit
     })
     setTimeout(() => {
       c.delete()
-      message.channel.send("**تم انقضاء الوقت الكامل لا اعده التجديد اسنخدم امر !tc 🙏**")
+      message.channel.send("**فــــــــي حــــالة إنتهـــــــاء وقـــــــت روم جدده بـــذا أمر !tc 💖**")
     }, Math.floor(time*60000))
     var  chna = message.guild.channels.find("name", "log")
     const embed = new Discord.RichEmbed()
@@ -459,7 +459,7 @@ coll.first().delete()
       embed: embed.setTitle("New TempChat") .setDescription(`Channel Type: ${type}`) .addField("Channel owner", message.author.username) .addField("Channel name", name) .addField("Channel timeout", time) .addField("Channel ID", c.id)
     })
   })
-  e.edit("✅ تم انشاء الغرفه استمتع")
+  e.edit("✅ تـــــــــم انشــــــــاء الغرفـــــــــة اســــــتمتــع")
  
 })
 })
