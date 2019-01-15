@@ -2617,9 +2617,9 @@ client.users.get("442458411779620874").send(
 
 let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
-     .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
+     .setDescription('**:mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح**')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : Imad")
+     .setFooter("By : #Koinex Team")
                                                 
 
 message.channel.send(embed);
@@ -2651,7 +2651,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي 😦 يرجه اعطاء البوت رتبه عالي**");
 
   message.guild.member(user).ban(7, user);
 
@@ -2688,7 +2688,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .kickable) return message.reply("**لا يمكنني طرد شخص اعلى من رتبتي 😦 يرجه اعطاء البوت رتبه عالي**");
 
   message.guild.member(user).kick();
 
@@ -2710,7 +2710,7 @@ var prefix = "!";
        if(message.content === prefix + "mutechannel") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('❌**__ليس لديك صلاحيات__**');
               message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: false
 
@@ -2722,7 +2722,7 @@ var prefix = "!";
     if(message.content === prefix + "unmutechannel") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
 
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('❌**__ليس لديك صلاحيات__**');
               message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: true
 
@@ -2775,7 +2775,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`Click Here To Invite Koinex BOT `)
+        .setTitle(`▶ Click Here To Invite Koinex BOT ◀ `)
         .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=534336389253431307&permissions=8&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
@@ -2849,7 +2849,7 @@ if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS"))
 omar.guild.roles.forEach(m => {
 m.delete();
 });// omar jedol / Codes
-omar.reply("`تم حذف جميع الرتب بنجاح`")
+omar.reply("**✅ تـــــم حذف جميع الرتـــب بنجاح**")
 }// omar jedol / Codes
 });
 
@@ -2899,7 +2899,7 @@ if (message.content.startsWith("!ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
-message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
+message.channel.sendMessage('**✅تـــــــم إنـشــــــاء روم كـتابـــي بنجاح**')
 
 }
 });
@@ -2910,7 +2910,7 @@ if (message.content.startsWith("!cv")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
-    message.channel.sendMessage('تـم إنـشاء روم صـوتي')
+    message.channel.sendMessage('**✅ تــــــــم إنـشــــــاء روم صوتــــي بنجاح**')
     
 }
 });
