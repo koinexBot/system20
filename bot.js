@@ -3036,7 +3036,7 @@ client.on('ready', function(){
 
   client.user.setStatus("dnd");
 
-    var ms = 40000 ;	
+    var ms = 100 ;	
 
     var setGame = ['!inv','!help'];	
 
